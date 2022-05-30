@@ -1,1 +1,1 @@
-from .cesar import encripta, decripta
+from .cesar import decripta, encripta
