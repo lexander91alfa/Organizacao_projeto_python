@@ -2,7 +2,7 @@ all:
 	@echo "Scripts para facilitar a vida"
 
 install:
-	@pip install requirements_dev.txt
+	@pip install -r requiriments_dev.txt
 
 format:
 	@blue cesar/*.py
