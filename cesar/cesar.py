@@ -3,7 +3,7 @@ from string import ascii_letters
 
 def encripta(frase, rotacao=13):
     """
-    Função que encripta uma frase com o alfabeto cifrado de César.
+    Função que encripta uma frase com o alfabeto cifrado de César
     :param frase: string
     :param n: int
     :return: string
