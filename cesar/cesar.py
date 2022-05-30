@@ -21,7 +21,7 @@ def encripta(frase, rotacao=13):
 
 def decripta(frase, rotacao=13):
     """
-    Função que decripta uma frase com o alfabeto cifrado de César.
+    Função que decripta uma frase com o alfabeto cifrado de César
     :param frase: string
     :param n: int
     :return: string

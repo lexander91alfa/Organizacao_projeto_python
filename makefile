@@ -15,8 +15,8 @@ lint:
 	@blue --check tests/*.py
 	@isort --check cesar/*.py
 	@isort --check tests/*.py
-	@prospector cesar/*.py
-	@prospector tests/*.py
+	@prospector --no-autodetect cesar/*.py
+	@prospector --no-autodetect tests/*.py
 
 test:
 	@pytest -V
