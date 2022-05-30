@@ -1,7 +1,7 @@
 from string import ascii_letters
 
 
-def encripta(frase, n=13):
+def encripta(frase, rotacao=13):
     """
     Função que encripta uma frase com o alfabeto cifrado de César.
     :param frase: string
@@ -9,17 +9,17 @@ def encripta(frase, n=13):
     :return: string
     """
     frase_encriptada = ''
-    for letra in frase:
-        if letra in ascii_letters:
+    for caracter in frase:
+        if caracter in ascii_letters:
             frase_encriptada += ascii_letters[
-                (ascii_letters.index(letra) + n) % len(ascii_letters)
+                (ascii_letters.index(caracter) + rotacao) % len(ascii_letters)
             ]
         else:
-            frase_encriptada += letra
+            frase_encriptada += caracter
     return frase_encriptada
 
 
-def decripta(frase, n=13):
+def decripta(frase, rotacao=13):
     """
     Função que decripta uma frase com o alfabeto cifrado de César.
     :param frase: string
@@ -27,13 +27,13 @@ def decripta(frase, n=13):
     :return: string
     """
     frase_decriptada = ''
-    for letra in frase:
-        if letra in ascii_letters:
+    for caracter in frase:
+        if caracter in ascii_letters:
             frase_decriptada += ascii_letters[
-                (ascii_letters.index(letra) - n) % len(ascii_letters)
+                (ascii_letters.index(caracter) - rotacao) % len(ascii_letters)
             ]
         else:
-            frase_decriptada += letra
+            frase_decriptada += caracter
     return frase_decriptada
 
 

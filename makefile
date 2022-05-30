@@ -1,17 +1,25 @@
 all:
 	@echo "Scripts para facilitar a vida"
 
-formatar:
-	@echo "Formatando código..."
-	blue cesar/*
-	blue tests/*
-	isort cesar/*
-	isort tests/*
+install:
+	@pip install requirements_dev.txt
 
-documentando.new:
-	@echo "Documentando..."
-	mkdocs new .
+format:
+	@blue cesar/*.py
+	@blue tests/*.py
+	@isort cesar/*.py
+	@isort tests/*.py
 
-documentando.serve:
-	@echo "rodando..."
-	mkdocs serve -a 127.0.0.1:8980
+lint:
+	@blue --check cesar/*.py
+	@blue --check tests/*.py
+	@isort --check cesar/*.py
+	@isort --check tests/*.py
+	@prospector cesar/*.py
+	@prospector tests/*.py
+
+test:
+	@pytest -V
+
+sec:
+	@pip-audit
